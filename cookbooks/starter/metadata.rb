@@ -1,0 +1,5 @@
+name 'starter'
+maintainer 'Sandi Tiffin'
+maintainer_email 'sandi.tiffin@gmail.com'
+description 'A basic starter cookbook'
+version '1.0.0'
