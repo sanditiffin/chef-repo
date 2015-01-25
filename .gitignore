@@ -53,3 +53,7 @@ $RECYCLE.BIN/
 
 # Cookbook downloads
 .cookbooks
+
+# Kitchen
+.kitchen
+.kitchen.local.yml

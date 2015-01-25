@@ -7,6 +7,6 @@ end
 
 # For more information, see the documentation: https://docs.chef.io/essentials_cookbook_recipes.html
 
-cookbook_file "/Users/tdi/myfile" do
-  source "myfile"
-end
+#cookbook_file "/Users/tdi/myfile" do
+#  source "myfile"
+#end
