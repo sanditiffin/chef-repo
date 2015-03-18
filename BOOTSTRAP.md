@@ -23,9 +23,9 @@ validation_key           "#{ENV['HOME']}/.chef/payscale-validator.pem"
 chef_server_url          "https://chef.underpaid.com/organizations/payscale"
 syntax_check_cache_path  "#{ENV['HOME']}/.chef/syntax_check_cache"
 cookbook_path            ["#{current_dir}/../cookbooks"]
-cookbook_copyright        "PayScale, Inc."
-cookbook_email            "psdev@payscale.com"
-knife[:editor] =          "<path to desired editor>"
+cookbook_copyright       "PayScale, Inc."
+cookbook_email           "psdev@payscale.com"
+knife[:editor] =         "<path to desired editor>"
 ```
 Bootstrap command
 -----------------
