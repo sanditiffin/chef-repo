@@ -28,8 +28,8 @@ cookbook_email           "psdev@payscale.com"
 knife[:editor] =         "<path to desired editor>"
 ```
 ## Bootstrap command
-The following command will bootstrap a Xen VM, setting its node name, chef environment,
-and run_list. 
+The following command will bootstrap a pre-launched Xen VM, setting its chef node name, 
+chef environment, and run_list. 
 
 The chef-centos.rb template is based on the default bootstrap template in Chef 12.03,
 found at knife/bootstrap/chef-full.erb within the chef installation directory, with some 
