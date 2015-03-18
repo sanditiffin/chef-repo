@@ -2,8 +2,8 @@
 
 All work has been done with Chef 12.0.3 on OS X as the workstation. YMMV as regards a
 different Chef version or different workstation OS, minor modification may prove necessary.
-I recommend using a linux VM as a Chef workstation with the latest chef version installed
-using the omnibus installer, everything should work as described.
+It would be a good idea to use a linux VM as a Chef workstation with the latest chef version 
+installed using the omnibus installer, then everything should work as described.
 
 ```
 $ knife --version
@@ -68,4 +68,24 @@ Utmaximusleovelfringillafringilla.Utsitametelitex.123
 
 Encrypted data bags
 -------------------
+An easy way to generate a secret file is like this:
+```
+$ openssl rand -base64 512 > <secretfile>
+```
 
+To decrypt and show the contents of an encrypted data bag on the Chef server from the command line:
+```
+$ knife data bag show [data bag name] [item name] --secret-file [secret file] -Fj
+```
+
+e.g. 
+```
+$ knife data bag show certs payscale --secret-file ~/.chef/secret certs payscale -Fj
+```
+
+To encrypt and upload a new version of the data bag:
+```
+$ knife data bag from file certs payscale.json --secret-file ~/.chef/secret
+```
+
+(You can of course use /dev/tty for the secret and paste it in)
