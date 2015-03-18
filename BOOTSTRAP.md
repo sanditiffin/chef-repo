@@ -50,7 +50,7 @@ $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template]
 - _chef env_: dev, test or production
 - _template_: Full path to location of template, e.g. ~/chef-repo/.chef/bootstrap/chef-centos.rb
 - _run_list_: e.g. (including quotes) 'role[haproxy-service]'
-- _secret file_: This is used to decrypt encrypted data bags the node needs. Specifying the file as /dev/tty on a linux or OS X system allows one to paste it in to the bootstrap session; note that you won't be prompted. Type control-d to end input. The contents pasted in will be saved in /etc/chef/encrypted/data_bag_secret.
+- _secret file_: This is used to decrypt encrypted data bags the node needs. Specifying the file as /dev/tty on a linux or OS X system allows one to paste it in to the bootstrap session; note that you won't be prompted. Type control-d to end input. The contents pasted in will be saved in /etc/chef/encrypted/data_bag_secret on the node.
 
 Example:
 ```
