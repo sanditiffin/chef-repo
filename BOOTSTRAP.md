@@ -57,6 +57,15 @@ $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template]
 Example:
 ```
 $ knife bootstrap 10.17.0.230 -x root -P '<password>' -N centos4.pssea.office -E dev -t ~/chef-repo/.chef/bootstrap/chef-centos.erb --run-list 'role[haproxy-service]' --secret-file /dev/tty
+Connecting to 10.17.0.230
+somelinesofsecretdatapastedinherefromyoursecretsvault
+Loremipsumdolorsitamet,consecteturadipiscingelit.Cura
+itureleifendlacinialigula,nonfinibuseratpulvina quis.
+Utmaximusleovelfringillafringilla.Utsitametelitex.123
+<control-d>
+10.17.0.230 Starting first Chef Client run...
+10.17.0.230 Running handlers complete
+10.17.0.230 Chef Client finished ...
 ```
 
 Encrypted data bags
