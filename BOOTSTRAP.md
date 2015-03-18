@@ -88,4 +88,4 @@ To encrypt and upload a new version of the data bag:
 $ knife data bag from file certs payscale.json --secret-file ~/.chef/secret
 ```
 
-(You can of course use /dev/tty for the secret and paste it in)
+(You can of course use /dev/tty for the secret file and paste it in)
