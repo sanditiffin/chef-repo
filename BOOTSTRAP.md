@@ -37,8 +37,8 @@ $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template]
 - passwd:   password for root on the node being bootstrapped
 - FQDN:   
 
-* it is important to set the fully qualified hostname as the chef node name, e.g.  haproxysvc01.pssea.office
-* the bootstrap template will use this name to set the hostname correctly (using the hostname 
+  * it is important to set the fully qualified hostname as the chef node name, e.g.  haproxysvc01.pssea.office
+  * the bootstrap template will use this name to set the hostname correctly (using the hostname 
   command and /etc/hosts file) so 'hostname -f' works and ohai gets the correct information the 
   first time
 
