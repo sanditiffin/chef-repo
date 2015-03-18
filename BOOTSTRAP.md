@@ -36,10 +36,12 @@ $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template]
 ip:       ip address of node being bootstrapped
 passwd:   password for root on the node being bootstrapped
 FQDN:   
-* important to set the fully qualified hostname as the chef node name, e.g.  haproxysvc01.pssea.office
+
+* it is important to set the fully qualified hostname as the chef node name, e.g.  haproxysvc01.pssea.office
 * the bootstrap template will use this name to set the hostname correctly (using the hostname 
   command and /etc/hosts file) so 'hostname -f' works and ohai gets the correct information the 
   first time
+
 chef env: dev, test or production
 template: full path to location of template, e.g. ~/chef-repo/.chef/bootstrap/chef-centos.rb
 run_list: e.g. 'role[haproxy-service]'
