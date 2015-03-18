@@ -80,7 +80,7 @@ $ knife data bag show [data bag name] [item name] --secret-file [secret file] -F
 
 e.g. 
 ```
-$ knife data bag show certs payscale --secret-file ~/.chef/secret certs payscale -Fj
+$ knife data bag show certs payscale --secret-file ~/.chef/secret certs -Fj
 ```
 
 To encrypt and upload a new version of the data bag:
