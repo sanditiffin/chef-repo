@@ -1,4 +1,4 @@
-## Bootstrap notes
+# Bootstrap notes
 
 All work has been done with Chef 12.0.3 on OS X as the workstation. YMMV as regards a
 different Chef version or different workstation OS, minor modification may prove necessary.
@@ -10,8 +10,7 @@ $ knife --version
 Chef: 12.0.3
 ```
 
-Knife configs
--------------
+## Knife configs
 Make sure you have a good knife.rb file configured, e.g. as below.
 (with CHEF_USER or USER set in the environment for this knife.rb)
 ```
@@ -28,8 +27,7 @@ cookbook_copyright       "PayScale, Inc."
 cookbook_email           "psdev@payscale.com"
 knife[:editor] =         "<path to desired editor>"
 ```
-Bootstrap command
------------------
+## Bootstrap command
 The following command will bootstrap a Xen VM, setting its node name, chef environment,
 and run_list. 
 
