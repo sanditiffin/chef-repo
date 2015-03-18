@@ -1,4 +1,4 @@
-#### Bootstrap notes
+## Bootstrap notes
 
 All work has been done with Chef 12.0.3 on OS X as the workstation. YMMV as regards a
 different Chef version or different workstation OS, minor modification may prove necessary.
