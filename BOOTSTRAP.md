@@ -25,7 +25,7 @@ syntax_check_cache_path  "#{ENV['HOME']}/.chef/syntax_check_cache"
 cookbook_path            ["#{current_dir}/../cookbooks"]
 cookbook_copyright        "PayScale, Inc."
 cookbook_email            "psdev@payscale.com"
-knife[:editor] =          "<path to desired editor"
+knife[:editor] =          "<path to desired editor>"
 ```
 Bootstrap command
 -----------------
