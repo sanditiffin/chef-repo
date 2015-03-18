@@ -37,7 +37,7 @@ found at knife/bootstrap/chef-full.erb within the chef installation directory, w
 additional hostname fixes.
 
 ```
-$ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template] -r [run_list]
+$ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template] -r [run_list] --secret-file /dev/tty
 ```
 
 - _ip_:       IP address of node being bootstrapped
@@ -51,8 +51,14 @@ $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template]
 - _chef env_: dev, test or production
 - _template_: Full path to location of template, e.g. ~/chef-repo/.chef/bootstrap/chef-centos.rb
 - _run_list_: e.g. (including quotes) 'role[haproxy-service]'
+- _secret file_: This is used to decrypt encrypted data bags the node needs. Specifying the file as /dev/tty allows one to paste it in to the bootstrap session; note that you won't be prompted. Type
+control-d to end input. The contents pasted in will be saved in /etc/chef/encrypted/data_bag_secret.
 
 Example:
 ```
 knife bootstrap 10.17.0.230 -x root -P '<password>' -N centos4.pssea.office -E dev -t ~/chef-repo/.chef/bootstrap/chef-centos.erb --run-list 'role[haproxy-service]'
 ```
+
+Encrypted data bags
+-------------------
+
