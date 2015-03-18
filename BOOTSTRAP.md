@@ -13,7 +13,7 @@ Knife configs
 -------------
 Make sure you have a good knife.rb file configured, e.g. as below.
 (with CHEF_USER or USER set in the environment for this knife.rb)
-
+```
 current_dir = File.dirname(__FILE__)
 user = ENV['CHEF_USER'] || ENV['USER']
 node_name                user
@@ -26,7 +26,7 @@ cookbook_path            ["#{current_dir}/../cookbooks"]
 cookbook_copyright        "PayScale, Inc."
 cookbook_email            "psdev@payscale.com"
 knife[:editor] =          "<path to desired editor"
-
+```
 Bootstrap command
 -----------------
 ```
