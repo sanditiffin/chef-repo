@@ -47,6 +47,12 @@ $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template]
   * The bootstrap template will use this name to set the hostname correctly (using the hostname 
   command and /etc/hosts file) so 'hostname -f' works and ohai gets the correct information the 
   first time
+  * the host name (excluding domain name) must be 15 characters or less, this is a NETBIOS limitation
 - _chef env_: dev, test or production
 - _template_: Full path to location of template, e.g. ~/chef-repo/.chef/bootstrap/chef-centos.rb
 - _run_list_: e.g. (including quotes) 'role[haproxy-service]'
+
+Example:
+```
+knife bootstrap 10.17.0.230 -x root -P '<password>' -N centos4.pssea.office -E dev -t ~/chef-repo/.chef/bootstrap/chef-centos.erb --run-list 'role[haproxy-service]'
+```
