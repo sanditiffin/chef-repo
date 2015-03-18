@@ -29,10 +29,10 @@ knife[:editor] =         "<path to desired editor>"
 ```
 Bootstrap command
 -----------------
-The following command will bootstrap a Xen vm, setting its node name, chef environment,
-and run_list. The chef-centos.rb template does some initial hostname fixes as well as all
-the other bootstrap goodness - it is based on the default bootstrap template in Chef 12.03,
-which on OS X is at /opt/chef/embedded/apps/chef/lib/chef/knife/bootstrap/chef-full.erb.
+The following command will bootstrap a Xen VM, setting its node name, chef environment,
+and run_list. The chef-centos.rb template is based on the default bootstrap template in Chef 12.03,
+/opt/chef/embedded/apps/chef/lib/chef/knife/bootstrap/chef-full.erb, with some additional 
+hostname fixes.
 
 ```
 $ knife bootstrap [ip] -x root -P [passwd] -N [FQDN] -E [chef env] -t [template] -r [run_list]
